@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# React E-Commerce Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a fully functional and visually appealing **e-commerce frontend application** built using **React.js** and **Tailwind CSS**. It includes a responsive layout, dynamic product listing, cart management system (mini and full cart), dark mode toggle, search functionality, and beautiful animations.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Project Overview
 
-### `npm start`
+The goal of this project is to simulate a modern e-commerce store with essential user features:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Product browsing
+- Cart functionality (add, remove, quantity)
+- Dynamic search
+- Dark/light mode support
+- Stylish UI with animations and gradients
+- Responsive design for mobile and desktop
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠 Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Technology    | Purpose                              |
+|---------------|---------------------------------------|
+| React.js      | Component-based frontend framework    |
+| Tailwind CSS  | Utility-first CSS for fast styling    |
+| React Icons   | Icons used in cart and delete buttons |
+| Context API   | Global cart state management          |
+| Vite / CRA    | (depending on setup) React bundler    |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##  Features Summary
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+###  UI & Styling
+- Full-page background image that stays fixed
+- Scrollable foreground over the image
+- Radial gradient and animated headings
+- Hover effects with glowing border and card highlight
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+###  Cart Functionality
+- Add items to cart with a button
+- Mini cart on the header that shows selected items
+- Full cart page showing item quantity, total price, and delete option
+- Clicking outside the mini cart closes it automatically
 
-### `npm run eject`
+###  Dark Mode
+- Dark/light toggle that updates the full theme using Tailwind’s `dark:` utilities
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+###  Search
+- Live search filtering products as user types
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+##  Folder Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+src/ │ ├── assets/ # Images (background, logo, empty-cart GIF) ├── components/ # Header, Footer, Hero, Cart components │ ├── Header.js │ ├── Footer.js │ ├── Hero.js │ ├── FullCartPage.js │ └── MiniCart.js │ ├── context/ │ └── CartContext.js # React Context API for managing cart state │ ├── pages/ │ └── Products.js # Main product listing with search support │ ├── App.js # Root app, routes all components └── index.js # Entry point
 
-## Learn More
+--- Key Components
+Header.js
+Contains search bar, dark mode toggle, and mini cart icon
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Clicking outside the mini cart closes it automatically
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Hero.js
+Displays welcome message with gradient text and animation
 
-### Code Splitting
+ProductListingPage.js
+Maps through products and displays cards with Add to Cart functionality
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+FullCartPage.js
+Shows all items in the cart with quantity, price, and delete option
 
-### Analyzing the Bundle Size
+MiniCart.js
+Small floating cart view from the header
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Finally to deploy using npm run build and again with the use of netlify to show the webiste.
