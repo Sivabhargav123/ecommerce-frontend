@@ -33,7 +33,7 @@ const App = () => {
       style={{ backgroundImage: `url(${BGCover})` }}
     ></div>
   
-    <div className="App min-h-screen pt-24 bg-white/80 dark:bg-gray-900/80 text-black dark:text-white relative z-10">
+    <div id="products" className="App min-h-screen pt-24 bg-white/80 dark:bg-gray-900/80 text-black dark:text-white relative z-10">
       <Header
         isDarkMode={isDarkMode}
         toggleDarkMode={toggleDarkMode}

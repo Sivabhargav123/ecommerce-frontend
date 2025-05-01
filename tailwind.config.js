@@ -6,6 +6,7 @@ module.exports = {
     darkMode: 'class',
     theme: {
       extend: {
+        scrollBehavior: ['responsive'],
         backgroundImage: {
           'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         },
@@ -18,6 +19,11 @@ module.exports = {
             '50%': { backgroundPosition: '100% 50%' },
           },
         },
+      },
+    },
+    variants: {
+      extend: {
+        scrollBehavior: ['responsive'],
       },
     },
     plugins: [],
