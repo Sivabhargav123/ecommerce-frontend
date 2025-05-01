@@ -38,7 +38,7 @@
 // export default Header;
 import React from 'react';
 import CartIcon from './CartIcon';
-import CL from '../assets/cartLogo.webp';
+import CL from '../assets/ecommerceBG.jpg';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
 const Header = ({ isDarkMode, toggleDarkMode, searchQuery, setSearchQuery }) => {
@@ -52,7 +52,6 @@ const Header = ({ isDarkMode, toggleDarkMode, searchQuery, setSearchQuery }) => 
         <div className="flex items-center space-x-4">
           <nav className="hidden md:flex space-x-6">
             <a href="/" className="text-gray-600 dark:text-gray-200 hover:text-blue-600">Home</a>
-            {/* <a href="/" className="text-gray-600 dark:text-gray-200 hover:text-blue-600">Products</a> */}
             <a href="#products" className="text-gray-600 dark:text-gray-200 hover:text-blue-600">Products</a>
           </nav>
 
