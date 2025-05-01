@@ -1,6 +1,5 @@
-// src/components/FeaturedProducts.js
-import React, { useState, useEffect } from 'react';
-import ProductCard from './ProductCard';
+import React, { useState, useEffect } from "react";
+import ProductCard from "./ProductCard";
 
 const FeaturedProducts = () => {
   const [products, setProducts] = useState([]);
@@ -10,11 +9,11 @@ const FeaturedProducts = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('https://fakestoreapi.com/products');
+        const response = await fetch("https://fakestoreapi.com/products");
         const data = await response.json();
         setProducts(data);
       } catch (err) {
-        setError('Failed to fetch products');
+        setError("Failed to fetch products");
       } finally {
         setLoading(false);
       }
@@ -36,7 +35,7 @@ const FeaturedProducts = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-2xl font-semibold mb-6">Featured Products</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {products.map(product => (
+          {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>

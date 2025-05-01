@@ -1,5 +1,5 @@
 
-import React, { createContext, useContext, useReducer, useEffect, useState } from 'react';
+import React, { createContext, useContext, useReducer, useEffect } from 'react';
 
 const CartContext = createContext();
 
@@ -40,7 +40,6 @@ const cartReducer = (state, action) => {
 const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, { cartItems: [] });
 
-  // Optional: You can remove dark mode logic from here entirely
   useEffect(() => {
     const savedCart = localStorage.getItem('cart');
     if (savedCart) {

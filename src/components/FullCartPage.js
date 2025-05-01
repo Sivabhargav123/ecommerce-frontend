@@ -1,8 +1,7 @@
 import React from "react";
 import { useCart } from "../context/CartContext";
 import EmptyCartImage from "../assets/empty-cart.gif";
-import { FaTrash } from 'react-icons/fa';
-
+import { FaTrash } from "react-icons/fa";
 
 const FullCartPage = () => {
   const { state, dispatch } = useCart();
@@ -34,8 +33,9 @@ const FullCartPage = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-2xl font-bold mb-6 text-start underline decoration-blue-600">Your Cart</h1>
-
+      <h1 className="text-2xl font-bold mb-6 text-start underline decoration-blue-600">
+        Your Cart
+      </h1>
 
       {cartItems.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-16">
@@ -79,12 +79,11 @@ const FullCartPage = () => {
                   </button>
                 </div>
                 <button
-  onClick={() => handleRemove(item)}
-  className="text-red-500 text-sm ml-4 flex items-center space-x-1 hover:text-red-700 transition"
->
-  <FaTrash className="text-base" />
-</button>
-
+                  onClick={() => handleRemove(item)}
+                  className="text-red-500 text-sm ml-4 flex items-center space-x-1 hover:text-red-700 transition"
+                >
+                  <FaTrash className="text-base" />
+                </button>
               </div>
             ))}
           </div>

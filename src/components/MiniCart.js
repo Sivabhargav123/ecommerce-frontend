@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { useCart } from '../context/CartContext';
-import EmptyCartImage from '../assets/empty-cart.gif'; // Make sure this path is correct
+import EmptyCartImage from '../assets/empty-cart.gif'; 
 import { FaTrash } from 'react-icons/fa';
 
 const MiniCart = () => {
