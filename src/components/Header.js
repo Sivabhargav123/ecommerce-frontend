@@ -38,7 +38,7 @@
 // export default Header;
 import React from 'react';
 import CartIcon from './CartIcon';
-import CL from '../assets/ecommerceBG.jpg';
+import CL from '../assets/cartLogo.webp';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
 const Header = ({ isDarkMode, toggleDarkMode, searchQuery, setSearchQuery }) => {
